@@ -8,6 +8,8 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                // "VisualStudioToolsForUnity.vstuc",
+                // "ms-dotnettools.dotnet-maui",
                 "ms-dotnettools.csdevkit",
                 // "ms-dotnettools.csharp",
                 // "ms-dotnettools.vscode-dotnet-runtime",
