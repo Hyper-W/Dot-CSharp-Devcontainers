@@ -6,7 +6,7 @@ FROM ubuntu:${UBUNTU_VERSION_NAME}
 ARG USER=user
 ARG USER_ID=1000
 ARG GROUP_ID=1000
-ARG DOTNET_VERSION=6.0
+ARG DOTNET_VERSION=8.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends sudo curl dotnet-sdk-${DOTNET_VERSION} \
     && apt-get clean && rm -rf /var/lib/apt/lists/* \
