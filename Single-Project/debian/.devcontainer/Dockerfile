@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends sudo curl wget 
     && apt-get install -y --no-install-recommends ./packages-microsoft-prod.deb && rm packages-microsoft-prod.deb \
     && apt-get update && apt-get install -y --no-install-recommends dotnet-sdk-${DOTNET_VERSION} \
     && apt-get remove -y --autoremove --purge wget && apt-get clean && rm -rf /var/lib/apt/lists/* \
-    && groupadd -g ${GROUP_ID} ${USER} \
-    && useradd -u ${USER_ID} -m -s /bin/bash -g ${USER} -G sudo ${USER} \
+    && groupadd -g "${GROUP_ID}" "${USER}" \
+    && useradd -u "${USER_ID}" -m -s /bin/bash -g "${USER}" -G sudo "${USER}" \
     && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 USER ${USER}
