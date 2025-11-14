@@ -9,7 +9,7 @@ RUN touch /var/mail/ubuntu && chown ubuntu /var/mail/ubuntu && userdel -r ubuntu
 ARG USER=user
 ARG USER_ID=1000
 ARG GROUP_ID=1000
-ARG DOTNET_VERSION=8.0
+ARG DOTNET_VERSION=10.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends sudo curl wget ca-certificates apt-transport-https \
     && wget https://packages.microsoft.com/config/ubuntu/$(grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"')/packages-microsoft-prod.deb -O packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
